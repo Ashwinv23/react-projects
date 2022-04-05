@@ -5,7 +5,7 @@ function App() {
   return (
     <main>
       <section className="container">
-        <div>
+        <div className="title">
           <h3>Our Reviews</h3>
           <div className="underline"></div>
         </div>

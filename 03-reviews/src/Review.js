@@ -8,11 +8,7 @@ const Review = ({ reviews }) => {
 
   return (
     <div>
-      <img
-        src={reviews[reviewNum].image}
-        alt={reviews[reviewNum].name}
-        style={{ height: "150px", width: "150px", borderRadius: "50%" }}
-      />
+      <img src={reviews[reviewNum].image} alt={reviews[reviewNum].name} />
       <h2>{reviews[reviewNum].name}</h2>
       <h4>{reviews[reviewNum].job}</h4>
       <p>{reviews[reviewNum].text}</p>
