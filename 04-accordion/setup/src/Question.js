@@ -12,7 +12,7 @@ const Question = ({ id, title, info }) => {
           {showMore ? <AiOutlineMinus /> : <AiOutlinePlus />}
         </button>
       </header>
-      <p className="para">{showMore ? info : null}</p>
+      {showMore && <p className="para">{info}</p>}
     </article>
   );
 };
