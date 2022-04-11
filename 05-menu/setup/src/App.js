@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Menu from "./Menu";
 import items from "./data";
+import Item from "./Item";
 
 function App() {
   const [food, setFood] = useState([]);
@@ -40,7 +40,9 @@ function App() {
         </button>
       </div>
       <section>
-        <Menu food={food} />
+        {food.map((item) => (
+          <Item key={item.id} item={item} />
+        ))}
       </section>
     </main>
   );

@@ -2,13 +2,13 @@ import React from "react";
 
 const Item = ({ item }) => {
   return (
-    <div>
+    <div className="item">
       <img src={item.img} alt={item.title} />
       <div>
-        <header>
+        <article>
           <h3>{item.title}</h3>
           <span>{item.price}</span>
-        </header>
+        </article>
         <p>{item.desc}</p>
       </div>
     </div>
