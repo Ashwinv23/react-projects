@@ -27,7 +27,7 @@ main {
 }
 
 .btn-section {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .btn-section button {
@@ -44,4 +44,9 @@ main {
   background-color: #c59d5f;
   color: #fff;
   border-radius: 5px;
+}
+
+section {
+  margin-top: 3rem;
+  border: 1px solid black;
 }

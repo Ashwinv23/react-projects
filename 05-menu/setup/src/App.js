@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Menu from "./Menu";
-import Categories from "./Categories";
 import items from "./data";
 
 function App() {
+  const [food, setFood] = useState([]);
+
+  useEffect(() => {
+    setFood(items);
+  }, []);
+
   return (
     <main>
       <header>
@@ -11,13 +16,31 @@ function App() {
         <div className="underline"></div>
       </header>
       <div className="btn-section">
-        <button>All</button>
-        <button>Breakfast</button>
-        <button>Lunch</button>
-        <button>Shakes</button>
+        <button onClick={() => setFood(items)}>All</button>
+        <button
+          onClick={() =>
+            setFood(items.filter((item) => item.category === "breakfast"))
+          }
+        >
+          Breakfast
+        </button>
+        <button
+          onClick={() =>
+            setFood(items.filter((item) => item.category === "lunch"))
+          }
+        >
+          Lunch
+        </button>
+        <button
+          onClick={() =>
+            setFood(items.filter((item) => item.category === "shakes"))
+          }
+        >
+          Shakes
+        </button>
       </div>
       <section>
-        <Menu />
+        <Menu food={food} />
       </section>
     </main>
   );
