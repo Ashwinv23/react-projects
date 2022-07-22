@@ -3,7 +3,8 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 
 const Content = ({ jobs }) => {
   const [index, setIndex] = useState(0);
-  const { id, order, title, dates, duties, company } = jobs[index];
+
+  const { title, dates, duties, company } = jobs[index];
 
   return (
     <section>
@@ -11,9 +12,11 @@ const Content = ({ jobs }) => {
         {jobs.map((job) => (
           <button
             key={job.id}
-            className={`job-btn`}
+            className="job-btn"
             onClick={() => {
-              if (job.id === "recAGJfiU4CeaV0HL") setIndex(0);
+              if (job.id === "recAGJfiU4CeaV0HL") {
+                setIndex(0);
+              }
               if (job.id === "recIL6mJNfWObonls") setIndex(1);
               if (job.id === "rec61x18GVY99hQq5") setIndex(2);
             }}

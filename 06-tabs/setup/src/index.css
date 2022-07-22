@@ -296,7 +296,7 @@ section {
   margin-bottom: 3rem;
   background-color: transparent;
   font-size: larger;
-  border-left: 3px solid green;
+  /* border-left: 3px solid green; */
   text-align: left;
   padding-left: 3.25rem;
 }
@@ -304,6 +304,7 @@ section {
 .job-btn:hover {
   color: green;
   cursor: pointer;
+  border-left: 3px solid green;
 }
 
 .desc {
@@ -311,4 +312,8 @@ section {
   display: grid;
   grid-template-columns: 1fr 8fr;
   align-items: center;
+}
+
+.active {
+  border-left: 3px solid green;
 }
