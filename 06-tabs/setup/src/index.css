@@ -301,6 +301,11 @@ section {
   padding-left: 3.25rem;
 }
 
+.job-btn:hover {
+  color: green;
+  cursor: pointer;
+}
+
 .desc {
   margin: 1rem 0;
   display: grid;

@@ -9,7 +9,15 @@ const Content = ({ jobs }) => {
     <section>
       <div className="btn-container">
         {jobs.map((job) => (
-          <button key={job.id} className={`job-btn`}>
+          <button
+            key={job.id}
+            className={`job-btn`}
+            onClick={() => {
+              if (job.id === "recAGJfiU4CeaV0HL") setIndex(0);
+              if (job.id === "recIL6mJNfWObonls") setIndex(1);
+              if (job.id === "rec61x18GVY99hQq5") setIndex(2);
+            }}
+          >
             {job.company}
           </button>
         ))}
@@ -18,10 +26,10 @@ const Content = ({ jobs }) => {
         <h3>{title}</h3>
         <h4>{company}</h4>
         <h4>{dates}</h4>
-        {duties.map((duty) => {
+        {duties.map((duty, index) => {
           return (
-            <div className="desc">
-              <FaAngleDoubleRight />
+            <div key={index} className="desc">
+              <FaAngleDoubleRight style={{ color: "green" }} />
               <p>{duty}</p>
             </div>
           );
