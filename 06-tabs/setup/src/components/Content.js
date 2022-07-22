@@ -2,24 +2,17 @@ import React, { useState } from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
 const Content = ({ jobs }) => {
-  const [index, setIndex] = useState(0);
-
-  const { title, dates, duties, company } = jobs[index];
+  const [value, setValue] = useState(0);
+  const { title, dates, duties, company } = jobs[value];
 
   return (
     <section>
       <div className="btn-container">
-        {jobs.map((job) => (
+        {jobs.map((job, index) => (
           <button
             key={job.id}
-            className="job-btn"
-            onClick={() => {
-              if (job.id === "recAGJfiU4CeaV0HL") {
-                setIndex(0);
-              }
-              if (job.id === "recIL6mJNfWObonls") setIndex(1);
-              if (job.id === "rec61x18GVY99hQq5") setIndex(2);
-            }}
+            className={`job-btn ${index === value && "active"}`}
+            onClick={() => setValue(index)}
           >
             {job.company}
           </button>
