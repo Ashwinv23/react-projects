@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FaAngleDoubleRight } from "react-icons/fa";
+import Header from "./components/Header";
+import Content from "./components/Content";
 
 const url = "https://course-api.com/react-tabs-project";
 
@@ -27,7 +28,12 @@ function App() {
     );
   }
 
-  return <main>tabs project setup</main>;
+  return (
+    <main>
+      <Header />
+      <Content jobs={jobs} />
+    </main>
+  );
 }
 
 export default App;
