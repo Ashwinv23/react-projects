@@ -1,14 +1,17 @@
 import React from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
-const List = ({ items, handleDel }) => {
+const List = ({ items, handleDel, handleEdit }) => {
   return (
     <div className="list-items">
       {items?.map((item) => (
         <div className="item" key={item.id}>
           <p>{item.item}</p>
           <div className="btn-container">
-            <button style={{ marginRight: "1rem", color: "green" }}>
+            <button
+              style={{ marginRight: "1rem", color: "green" }}
+              onClick={() => handleEdit(item.id)}
+            >
               <FaEdit />
             </button>
 
