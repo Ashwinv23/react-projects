@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  /* width: 95vw; */
+  max-width: 35rem;
+  margin: 8rem auto 0;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+  /* border: 1px solid black; */
+  background-color: antiquewhite;
+}
+form h3 {
+  padding: 20px 0;
+  font-size: 1.5rem;
+}
+
+form {
+  text-align: center;
+}
+
+form > input {
+  height: 2rem;
+  width: 80%;
+  padding-left: 10px;
+  border: none;
+}
+
+form > button {
+  height: 2rem;
+  width: 4rem;
+  background-color: #a5d5f8;
+  border: none;
+  letter-spacing: 2px;
+}
+
+form > button:hover {
+  background-color: #6389a4;
+  border: none;
+  letter-spacing: 2px;
+  color: #fff;
+}
