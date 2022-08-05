@@ -60,6 +60,7 @@ form > button:hover {
 .item p {
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
+  width: 400px;
 }
 
 .btn-container > button {

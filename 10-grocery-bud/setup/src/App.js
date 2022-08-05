@@ -7,9 +7,8 @@ function App() {
   const [items, setItems] = useState([]);
 
   const handleDel = (id) => {
-    // const newItems = items.filter((todoItem) => todoItem.id !== id);
-    // setItems(newItems);
-    console.log("id is ", id);
+    const newItems = items.filter((todoItem) => todoItem.id !== id);
+    setItems(newItems);
   };
 
   const handleSubmit = (e) => {
