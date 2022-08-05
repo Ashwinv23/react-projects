@@ -6,6 +6,12 @@ function App() {
   const [value, setValue] = useState("");
   const [items, setItems] = useState([]);
 
+  const handleDel = (id) => {
+    // const newItems = items.filter((todoItem) => todoItem.id !== id);
+    // setItems(newItems);
+    console.log("id is ", id);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
@@ -38,7 +44,7 @@ function App() {
         />
         <button>Submit</button>
       </form>
-      <List value={value} items={items} />
+      <List items={items} handleDel={handleDel} />
     </main>
   );
 }
